@@ -115,7 +115,7 @@ namespace AST
         Program() { this->_type = PROGRAM; }
         Program(Identifier *head, Routine *body) : routine(body), program_head(head) { this->_type = PROGRAM; }
 
-        //virtual llvm::Value *CodeGen(CodeGenContext& context);
+        virtual llvm::Value *CodeGen(CodeGenContext& context);
     };
 
     class Routine : public Node{
